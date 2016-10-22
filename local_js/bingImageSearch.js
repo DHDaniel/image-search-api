@@ -75,8 +75,4 @@ function queryBing(searchQuery, page, callback) {
   }).end();
 }
 
-queryBing("Asa Akira XXX", 1, function (err, data) {
-  if (err) console.log(err);
-
-  console.log(data);
-});
+module.exports = queryBing;
