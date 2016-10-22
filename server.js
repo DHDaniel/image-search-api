@@ -17,7 +17,7 @@ app.get("/api/search", function (req, res) {
   var searchTerm = req.query.q;
   var page = (req.query.page) ? req.query.page : 1;
   var today = new Date();
-  var timelog = today.toDateString();
+  var timelog = today.toUTCString();
 
   searchImage(searchTerm, page, function (err, data) {
     if (err) console.log(err);
